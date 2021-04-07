@@ -1,10 +1,10 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { MDBIcon } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Footer = () => {
   return (
-    <MDBFooter color="purple darken-2" className="pt-4 mt-4">
+    <MDBFooter className="pt-4 mt-4 text-white bg-dark">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" className="text-center align-self-center">
@@ -16,10 +16,9 @@ const Footer = () => {
           <MDBCol md="6" className="text-center">
             <h5 className="title">Retrouvez-moi ici</h5>
             <ul>
-              <li className="list-unstyled">
+              <li className="list-unstyled d-inline m-2">
                 <a
                   href="https://github.com/JulienLamalle"
-                  target="_blank"
                   target="_blank"
                 >
                   <MDBIcon
@@ -30,7 +29,7 @@ const Footer = () => {
                   />
                 </a>
               </li>
-              <li className="list-unstyled">
+              <li className="list-unstyled d-inline m-2">
                 <a
                   href="https://www.linkedin.com/in/julien-lamalle/"
                   target="_blank"

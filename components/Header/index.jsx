@@ -11,12 +11,12 @@ import {
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
-} from "mdbreact";
-import { MDBIcon } from "mdbreact";
+} from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Header = () => {
   return (
-    <MDBNavbar color="purple darken-2" expand="md" dark>
+    <MDBNavbar className="text-white bg-dark py-5" expand="md">
       <MDBNavbarToggler />
       <MDBCollapse id="navbarCollapse" navbar>
         <MDBNavbarNav left>
