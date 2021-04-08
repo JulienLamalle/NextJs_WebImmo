@@ -16,7 +16,7 @@ import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Header = () => {
   return (
-    <MDBNavbar className="text-white bg-dark py-5" expand="md">
+    <MDBNavbar className="text-white bg-night py-5" expand="md">
       <MDBNavbarToggler />
       <MDBCollapse id="navbarCollapse" navbar>
         <MDBNavbarNav left>

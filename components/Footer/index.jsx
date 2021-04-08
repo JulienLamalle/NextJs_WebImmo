@@ -4,7 +4,7 @@ import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Footer = () => {
   return (
-    <MDBFooter className="pt-4 mt-4 text-white bg-dark">
+    <MDBFooter className="pt-4 mt-4 text-white bg-night">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" className="text-center align-self-center">
@@ -16,8 +16,9 @@ const Footer = () => {
           <MDBCol md="6" className="text-center">
             <h5 className="title">Retrouvez-moi ici</h5>
             <ul>
-              <li className="list-unstyled d-inline m-2">
+              <li className="d-inline m-2">
                 <a
+                  className="text-white"
                   href="https://github.com/JulienLamalle"
                   target="_blank"
                 >
@@ -29,8 +30,9 @@ const Footer = () => {
                   />
                 </a>
               </li>
-              <li className="list-unstyled d-inline m-2">
+              <li className="d-inline m-2">
                 <a
+                  className="text-white"
                   href="https://www.linkedin.com/in/julien-lamalle/"
                   target="_blank"
                 >
@@ -50,7 +52,7 @@ const Footer = () => {
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Fait avec{" "}
           <span className="text-danger">&#10084;&#65039;</span> par{" "}
-          <a href="https://julienlamalle.netlify.app/"> Julien Lamalle</a>
+          <a href="https://julienlamalle.netlify.app/" className="text-white"> Julien Lamalle</a>
         </MDBContainer>
       </div>
     </MDBFooter>
