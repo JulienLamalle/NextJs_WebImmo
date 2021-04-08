@@ -12,7 +12,7 @@ import {
 import { PriceFormatted } from "../Helpers";
 
 const PropertyVip = ({ properties }) => (
-  <section className="container-fluid">
+  <section className="container-fluid my-5" style={{position: "relative", top: 25+'px'}}>
     <h2 className="h2-responsive font-weight-bold text-center my-4 text-night">
       Bien sponsorisés
     </h2>
