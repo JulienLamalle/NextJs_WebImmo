@@ -1,12 +1,12 @@
 import React from "react";
 import AwesomeSlider from "react-awesome-slider";
-import styles from "../../styles/Carousel.module.css";
+import AwsSliderStyles from "../../styles/Carousel.module.scss";
 
 const Carousel = () => {
   return (
     <AwesomeSlider
-      cssModule={styles}
-      className="mb-5"
+      cssModule={AwsSliderStyles}
+      className="awssld mb-5"
       animation="cubeAnimation"
     >
       <div data-src="/images/villa.jpeg" />

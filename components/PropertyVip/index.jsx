@@ -12,9 +12,9 @@ import {
 import { PriceFormatted } from "../Helpers";
 
 const PropertyVip = ({ properties }) => (
-  <section className="container-fluid my-5" style={{position: "relative", top: 25+'px'}}>
+  <section className="container-fluid my-5">
     <h2 className="h2-responsive font-weight-bold text-center my-4 text-night">
-      Bien sponsorisés
+      Biens sponsorisés
     </h2>
     <MDBRow>
       {properties &&
