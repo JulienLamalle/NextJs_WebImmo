@@ -51,16 +51,12 @@ const PropertySection = ({ properties, handleDisplay }) => (
     </MDBRow>
     <div className="text-center">
       <MDBBtn
-        style={{ backgroundColor: "#273469" }}
-        className="lift py-3"
-        rounded
+        className="lift py-3 globalBtn"
       >
         Afficher plus
       </MDBBtn>
       <MDBBtn
-        style={{ backgroundColor: "#273469" }}
-        className="lift py-3 ml-3"
-        rounded
+        className="lift py-3 ml-3 globalBtn"
         onClick={handleDisplay}
       >
         Pourquoi nous choisir ?

@@ -1,0 +1,11 @@
+@import 'colors';
+
+.globalBtn {
+  background-color: var(--night);
+  border: none;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: var(--night) ;
+  }
+}
