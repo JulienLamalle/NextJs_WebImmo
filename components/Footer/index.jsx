@@ -15,7 +15,7 @@ const Footer = () => {
           </MDBCol>
           <MDBCol md="6" className="text-center">
             <h5 className="title">Retrouvez-moi ici</h5>
-            <ul>
+            <ul className="px-0">
               <li className="d-inline m-2">
                 <a
                   className="text-white"

@@ -20,7 +20,7 @@ const PropertyVip = ({ properties }) => (
       {properties &&
         properties.map((property) => (
           <MDBCol md="4" lg="4" key={property.title}>
-            <MDBCard>
+            <MDBCard className="mb-4">
               <MDBRipple
                 rippleColor="light"
                 rippleTag="div"

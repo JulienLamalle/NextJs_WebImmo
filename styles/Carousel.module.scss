@@ -14,3 +14,9 @@
   --loader-bar-color: #273469;
   --loader-bar-height: 2px;
 }
+
+@media screen and (max-width: 768px) {
+  .awssld {
+    height: 70vh;
+  }
+}
