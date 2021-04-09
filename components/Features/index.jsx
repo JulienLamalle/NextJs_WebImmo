@@ -81,12 +81,12 @@ const Features = ({ handleDisplay }) => {
         </div>
       </div>
       <div className="text-center">
-        <MDBBtn
+        <button
           className="lift py-3 ml-3 globalBtn"
           onClick={handleDisplay}
         >
           Voir les biens de l'agence
-        </MDBBtn>
+        </button>
       </div>
     </section>
   );

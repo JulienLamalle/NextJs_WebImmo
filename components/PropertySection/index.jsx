@@ -50,17 +50,17 @@ const PropertySection = ({ properties, handleDisplay }) => (
         ))}
     </MDBRow>
     <div className="text-center">
-      <MDBBtn
+      <button
         className="lift py-3 globalBtn"
       >
         Afficher plus
-      </MDBBtn>
-      <MDBBtn
+      </button>
+      <button
         className="lift py-3 ml-3 globalBtn"
         onClick={handleDisplay}
       >
         Pourquoi nous choisir ?
-      </MDBBtn>
+      </button>
     </div>
   </section>
 );
