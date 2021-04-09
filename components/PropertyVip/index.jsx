@@ -9,10 +9,10 @@ import {
   MDBCardImage,
   MDBRipple,
 } from "mdb-react-ui-kit";
-import { PriceFormatted } from "../Helpers";
+import { PriceFormated } from "../Helpers";
 
 const PropertyVip = ({ properties }) => (
-  <section className="container-fluid my-3">
+  <section className="container-fluid" style={{marginTop: 60 + 'px !important'}}>
     <h2 className="h2-responsive font-weight-bold text-center my-4 text-night">
       Découvrez nos biens sponsorisés
     </h2>
@@ -41,7 +41,7 @@ const PropertyVip = ({ properties }) => (
               <MDBCardBody>
                 <MDBCardTitle>{property.title}</MDBCardTitle>
                 <MDBCardText>
-                  <strong>{PriceFormatted(property.price)}</strong>
+                  <strong>{PriceFormated(property.price)}</strong>
                 </MDBCardText>
               </MDBCardBody>
             </MDBCard>

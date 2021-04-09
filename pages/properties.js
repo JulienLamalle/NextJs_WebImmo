@@ -1,11 +1,15 @@
 import React from 'react';
 import api from '../auth/axios'
 import Layout from '../components/Layout'
+import Card from '../components/Card'
+import { MDBContainer } from 'mdb-react-ui-kit';
 
 const Properties = ({ properties }) => {
   return (
     <Layout>
-      {JSON.stringify(properties)}
+      <MDBContainer>
+        <Card properties={properties} />
+      </MDBContainer>
     </Layout>
   )
 }

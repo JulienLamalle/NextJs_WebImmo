@@ -15,3 +15,23 @@
     outline: 0;
   }
 }
+
+.smBtn {
+  background-color: var(--night);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  padding: 8px 15px;
+
+  &:hover {
+    background-color: var(--night) ;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.topMarged {
+  margin-top: 10px;
+}

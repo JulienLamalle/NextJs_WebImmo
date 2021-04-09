@@ -10,10 +10,10 @@ import {
   MDBRipple,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { PriceFormatted } from "../Helpers";
+import { PriceFormated } from "../Helpers";
 
 const PropertySection = ({ properties, handleDisplay }) => (
-  <section className="container-fluid my-3">
+  <section className="container-fluid mb-3 mt-5">
     <h2 className="h2-responsive font-weight-bold text-center mb-4 text-night">
       Découvrez notre Catalogue
     </h2>
@@ -42,7 +42,7 @@ const PropertySection = ({ properties, handleDisplay }) => (
               <MDBCardBody>
                 <MDBCardTitle>{property.title}</MDBCardTitle>
                 <MDBCardText>
-                  <strong>{PriceFormatted(property.price)}</strong>
+                  <strong>{PriceFormated(property.price)}</strong>
                 </MDBCardText>
               </MDBCardBody>
             </MDBCard>
@@ -51,12 +51,12 @@ const PropertySection = ({ properties, handleDisplay }) => (
     </MDBRow>
     <div className="text-center">
       <button
-        className="lift py-3 globalBtn"
+        className="lift py-3 globalBtn my-3"
       >
         Afficher plus
       </button>
       <button
-        className="lift py-3 ml-3 globalBtn"
+        className="lift py-3 ml-3 globalBtn my-3"
         onClick={handleDisplay}
       >
         Pourquoi nous choisir ?

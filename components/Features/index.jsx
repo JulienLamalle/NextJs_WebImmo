@@ -3,7 +3,7 @@ import { MDBBtn } from "mdb-react-ui-kit";
 
 const Features = ({ handleDisplay }) => {
   return (
-    <section id="features" className="text-center mb-5">
+    <section className="text-center mb-5">
       <h2 className="h2-responsive font-weight-bold text-center mb-4 text-night">
         Pourquoi nous-choisir ?
       </h2>
@@ -19,7 +19,7 @@ const Features = ({ handleDisplay }) => {
         <div className="col-lg-4 text-center">
           <div className="icon-area">
             <div className="circle-icon">
-              <i className="fas fa-cogs text-night"></i>
+              <i className="fas fa-camera text-night"></i>
             </div>
             <br />
             <h5 className="text-dark font-weight-bold mt-2">
@@ -62,7 +62,7 @@ const Features = ({ handleDisplay }) => {
         <div className="col-lg-4 text-center mb-4">
           <div className="icon-area">
             <div className="circle-icon">
-              <i className="fas fa-users text-night"></i>
+              <i className="fas fa-user text-night"></i>
             </div>
             <br />
             <h5 className="text-dark font-weight-bold mt-2">
@@ -82,7 +82,7 @@ const Features = ({ handleDisplay }) => {
       </div>
       <div className="text-center">
         <button
-          className="lift py-3 ml-3 globalBtn"
+          className="lift py-3 ml-3 globalBtn topMarged"
           onClick={handleDisplay}
         >
           Voir les biens de l'agence
