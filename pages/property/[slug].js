@@ -25,7 +25,7 @@ const Property = ({ property }) => {
             <MDBCard>
               <MDBCardBody>
                 <MDBRow>
-                  <MDBCol>
+                  <MDBCol md="9" lg="9">
                     <CardCarousel property={property} />
                     <Slug property={property}/>
                   </MDBCol>
