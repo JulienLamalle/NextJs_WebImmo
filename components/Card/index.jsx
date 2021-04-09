@@ -10,6 +10,7 @@ import {
   MDBCardImage,
 } from "mdb-react-ui-kit";
 import { PriceFormated } from "../Helpers";
+import Link from "next/link";
 
 const Card = ({ properties }) => {
   let index = 0;
@@ -17,7 +18,7 @@ const Card = ({ properties }) => {
     <MDBCard className="my-5 px-5 pb-5">
       <MDBCardBody>
         <h2 className="h1-responsive font-weight-bold text-center my-5 text-night">
-          Découvrez la liste de tous nos bien
+          Découvrez la liste de tous nos biens
         </h2>
         <p className="text-center w-responsive mx-auto mb-5">
           Chaque bien chez WebImmo est unique, nous sélectionnons les domaines
@@ -28,23 +29,29 @@ const Card = ({ properties }) => {
           properties.map((property, index) => (
             <MDBRow>
               <MDBCol lg="5">
-                <MDBRipple
-                  rippleColor="light"
-                  rippleTag="div"
-                  className="bg-image hover-overlay"
+                <Link
+                  href="/property/[slug]"
+                  as={`/property/${property.slug}`}
+                  passHref
                 >
-                  <MDBCardImage
-                    src={property.pictures[0]}
-                    alt={property.title}
-                    className="globalImg mb-2"
-                  />
-                  <a>
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                    ></div>
-                  </a>
-                </MDBRipple>
+                  <MDBRipple
+                    rippleColor="light"
+                    rippleTag="div"
+                    className="bg-image hover-overlay"
+                  >
+                    <MDBCardImage
+                      src={property.pictures[0]}
+                      alt={property.title}
+                      className="globalImg mb-2"
+                    />
+                    <a>
+                      <div
+                        className="mask"
+                        style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                      ></div>
+                    </a>
+                  </MDBRipple>
+                </Link>
               </MDBCol>
               <MDBCol lg="7">
                 <span className="text-night">

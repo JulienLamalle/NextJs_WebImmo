@@ -117,5 +117,9 @@ a:focus {
 }
 
 .nav-link {
-  color: var(--white)
+  color: var(--white);
+
+  &:hover {
+    color: var(--white);
+  }
 }
