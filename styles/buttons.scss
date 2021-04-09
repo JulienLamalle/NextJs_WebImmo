@@ -10,4 +10,8 @@
   &:hover {
     background-color: var(--night) ;
   }
+
+  &:focus {
+    outline: 0;
+  }
 }

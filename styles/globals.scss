@@ -1,5 +1,9 @@
 @import 'colors';
 
+a {
+  color: var(--white) !important;
+}
+
 .globalImg {
   width: 100%;
   height: auto;

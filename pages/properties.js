@@ -1,5 +1,6 @@
 import React from 'react';
 import api from '../auth/axios'
+import Layout from '../components/Layout'
 
 const Properties = ({ properties }) => {
   return (

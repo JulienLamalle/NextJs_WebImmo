@@ -28,11 +28,11 @@ const Header = () => {
             </div>
           </MDBNavbarItem>
           <MDBNavbarItem>
-            <Link href="/properties">
-              <div className="nav-link">
+            <Link href="/properties" passHref>
+              <a className="nav-link">
                 <MDBIcon icon="building" className="mr-1" />
                 Liste des biens
-              </div>
+              </a>
             </Link>
           </MDBNavbarItem>
         </MDBNavbarNav>
