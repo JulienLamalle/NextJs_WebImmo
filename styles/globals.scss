@@ -1,0 +1,79 @@
+@import 'colors';
+
+.globalImg {
+  width: 100%;
+  height: auto;
+}
+
+.text-night {
+  color: var(--night)
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-lighter {
+  color: var(--lighter);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.bg-night {
+  background-color: var(--night);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-lighter {
+  background-color: var(--lighter);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.lift {
+  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease; }
+
+.lift:hover,
+.lift:focus {
+  box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
+  -webkit-transform: translate3d(0, -1px, 0);
+  transform: translate3d(0, -1px, 0); }
+
+.lift-lg:hover,
+.lift-lg:focus {
+  box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0); }
+
+@media screen and (min-width: 768px) {
+  .globalImg {
+    width: 100%;
+    height: 250px;
+  }
+}

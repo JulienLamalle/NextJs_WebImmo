@@ -1,0 +1,19 @@
+@import 'colors';
+
+.icon-area {
+  .circle-icon {
+    i {
+      box-shadow: 0 8px 19px var(--black) ;
+      width: 100px;
+      height: 100px;
+      line-height: 1.4;
+      padding: 1.8rem;
+      font-size: 2rem;
+      border-radius: 50%;
+      background: white;
+      &:hover {
+        background: #f1f1f7;
+      }
+    }
+  }
+}

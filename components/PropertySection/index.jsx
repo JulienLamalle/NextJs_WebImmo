@@ -8,13 +8,14 @@ import {
   MDBRow,
   MDBCardImage,
   MDBRipple,
+  MDBBtn,
 } from "mdb-react-ui-kit";
 import { PriceFormatted } from "../Helpers";
 
-const PropertyVip = ({ properties }) => (
+const PropertySection = ({ properties, handleDisplay }) => (
   <section className="container-fluid my-3">
-    <h2 className="h2-responsive font-weight-bold text-center my-4 text-night">
-      Découvrez nos biens sponsorisés
+    <h2 className="h2-responsive font-weight-bold text-center mb-4 text-night">
+      Découvrez notre Catalogue
     </h2>
     <MDBRow>
       {properties &&
@@ -48,7 +49,24 @@ const PropertyVip = ({ properties }) => (
           </MDBCol>
         ))}
     </MDBRow>
+    <div className="text-center">
+      <MDBBtn
+        style={{ backgroundColor: "#273469" }}
+        className="lift py-3"
+        rounded
+      >
+        Afficher plus
+      </MDBBtn>
+      <MDBBtn
+        style={{ backgroundColor: "#273469" }}
+        className="lift py-3 ml-3"
+        rounded
+        onClick={handleDisplay}
+      >
+        Pourquoi nous choisir ?
+      </MDBBtn>
+    </div>
   </section>
 );
 
-export default PropertyVip;
+export default PropertySection;

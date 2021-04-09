@@ -1,19 +1,23 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
+import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AwsSliderStyles from "../../styles/Carousel.module.scss";
 
-const Carousel = () => {
-  return (
-    <AwesomeSlider
+const AutoPlaySlider = withAutoplay(AwesomeSlider);
+
+const Carousel = () => (
+    <AutoPlaySlider
       cssModule={AwsSliderStyles}
       className="awssld mb-5"
-      animation="cubeAnimation"
+      play={true}
+      cancelOnInteraction={true}
+      interval={6000}
     >
       <div data-src="/images/villa.jpeg" />
       <div data-src="/images/apartment.jpeg" />
       <div data-src="/images/pool.jpeg" />
-    </AwesomeSlider>
-  );
-};
+    </AutoPlaySlider>
+);
+
 
 export default Carousel;
