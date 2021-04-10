@@ -9,16 +9,16 @@ import {
   MDBCol,
   MDBRow,
   MDBContainer,
-  MDBIcon
+  MDBIcon,
 } from "mdb-react-ui-kit";
-import Slug from '../../components/Slug'
+import Slug from "../../components/Slug";
 import CardVip from "../../components/CardVip";
+import CardRelated from "../../components/CardRelated/index.jsx";
 
-const Property = ({ property, propertiesVip }) => {
-
+const Property = ({ property, propertiesVip, propertiesRelated }) => {
   const styles = {
-    fontSize: 15
-  }
+    fontSize: 15,
+  };
 
   return (
     <div>
@@ -33,13 +33,13 @@ const Property = ({ property, propertiesVip }) => {
                 <MDBRow>
                   <MDBCol md="9" lg="9">
                     <CardCarousel property={property} />
-                    <Slug property={property}/>
+                    <Slug property={property} />
                   </MDBCol>
                   <MDBCol md="3" lg="3">
                     <h4 className="mt-5">Contactez-nous</h4>
                     <div style={styles}>
                       <MDBIcon icon="calculator" className="mr-2" />
-                      10 rue des vainqueurs 
+                      10 rue des vainqueurs
                     </div>
                     <div style={styles}>
                       <MDBIcon icon="mobile-alt" className="mr-2" />
@@ -53,6 +53,15 @@ const Property = ({ property, propertiesVip }) => {
                     <CardVip properties={propertiesVip} />
                   </MDBCol>
                 </MDBRow>
+                <hr className="my-4" />
+                <MDBRow>
+                  {propertiesRelated && propertiesRelated.length !== 0 && (
+                    <MDBCol>
+                      <h2 className="mb-5">Biens similaires</h2>
+                      <CardRelated properties={propertiesRelated} />
+                    </MDBCol>
+                  )}
+                </MDBRow>
               </MDBCardBody>
             </MDBCard>
           </MDBContainer>
@@ -65,8 +74,8 @@ const Property = ({ property, propertiesVip }) => {
 export const getStaticPaths = async () => {
   const { data } = await api.get("/api/properties?limit=100");
   const properties = data.data;
-  const paths = properties.map(property => ({
-    params: { slug: property.slug }
+  const paths = properties.map((property) => ({
+    params: { slug: property.slug },
   }));
 
   return { paths, fallback: true };
@@ -75,12 +84,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const { data: property } = await api.get(`/api/property/${slug}`);
-  const { data: propertiesVip } = await api.get('/api/properties/vip')
+  const { data: propertiesVip } = await api.get("/api/properties/vip");
+  const { data: propertiesRelated } = await api.get(
+    `/api/properties/related/${property._id}`
+  );
 
   return {
     props: {
       property,
-      propertiesVip
+      propertiesVip,
+      propertiesRelated,
     },
   };
 };

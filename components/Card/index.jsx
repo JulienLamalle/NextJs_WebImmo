@@ -44,12 +44,10 @@ const Card = ({ properties }) => {
                       alt={property.title}
                       className="globalImg mb-2"
                     />
-                    <a>
-                      <div
-                        className="mask"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                      ></div>
-                    </a>
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                    ></div>
                   </MDBRipple>
                 </Link>
               </MDBCol>
