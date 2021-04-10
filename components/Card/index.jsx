@@ -30,7 +30,8 @@ const Card = ({ properties }) => {
             <MDBRow>
               <MDBCol lg="5">
                 <Link
-                  href={`/property/${property.slug}`}
+                  href="/property/[slug]"
+                  as={`/property/${property.slug}`}
                   passHref
                 >
                   <MDBRipple

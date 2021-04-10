@@ -6,7 +6,6 @@ import CardCarousel from "../../components/CardCarousel";
 import {
   MDBCard,
   MDBCardBody,
-  MDVContainer,
   MDBCol,
   MDBRow,
   MDBContainer,
@@ -17,7 +16,7 @@ const Property = ({ property }) => {
   return (
     <div>
       <Head>
-        <title>WebImmo - {property.title}</title>
+        <title>WebImmo</title>
       </Head>
       {property && (
         <Layout>
@@ -42,8 +41,8 @@ const Property = ({ property }) => {
 export const getStaticPaths = async () => {
   const { data } = await api.get("/api/properties?limit=100");
   const properties = data.data;
-  const paths = properties.map((property) => ({
-    params: { slug: property.slug },
+  const paths = properties.map(property => ({
+    params: { slug: property.slug }
   }));
 
   return { paths, fallback: true };
