@@ -131,3 +131,11 @@ a {
 .mask {
   cursor: pointer;
 }
+
+.carousel-control-prev-icon:after {
+  content: '';
+}
+
+.carousel-control-next-icon:after {
+  content: '';
+}
