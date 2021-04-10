@@ -27,7 +27,7 @@ const Card = ({ properties }) => {
         </p>
         {properties &&
           properties.map((property, index) => (
-            <MDBRow>
+            <MDBRow key={property._id}>
               <MDBCol lg="5">
                 <Link
                   href="/property/[slug]"

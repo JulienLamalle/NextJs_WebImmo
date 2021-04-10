@@ -9,10 +9,17 @@ import {
   MDBCol,
   MDBRow,
   MDBContainer,
+  MDBIcon
 } from "mdb-react-ui-kit";
 import Slug from '../../components/Slug'
+import CardVip from "../../components/CardVip";
 
-const Property = ({ property }) => {
+const Property = ({ property, propertiesVip }) => {
+
+  const styles = {
+    fontSize: 15
+  }
+
   return (
     <div>
       <Head>
@@ -27,6 +34,23 @@ const Property = ({ property }) => {
                   <MDBCol md="9" lg="9">
                     <CardCarousel property={property} />
                     <Slug property={property}/>
+                  </MDBCol>
+                  <MDBCol md="3" lg="3">
+                    <h4 className="mt-5">Contactez-nous</h4>
+                    <div style={styles}>
+                      <MDBIcon icon="calculator" className="mr-2" />
+                      10 rue des vainqueurs 
+                    </div>
+                    <div style={styles}>
+                      <MDBIcon icon="mobile-alt" className="mr-2" />
+                      +33758742561
+                    </div>
+                    <div style={styles}>
+                      <MDBIcon icon="envelope" className="mr-2" />
+                      Julienlamalle63100@gmail.com
+                    </div>
+                    <h3 className="mt4 mb-3">Biens sponsorisés</h3>
+                    <CardVip properties={propertiesVip} />
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
@@ -51,10 +75,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const { data: property } = await api.get(`/api/property/${slug}`);
+  const { data: propertiesVip } = await api.get('/api/properties/vip')
 
   return {
     props: {
       property,
+      propertiesVip
     },
   };
 };

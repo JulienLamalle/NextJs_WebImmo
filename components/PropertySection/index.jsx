@@ -11,6 +11,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { PriceFormated } from "../Helpers";
+import Link from 'next/link'
 
 const PropertySection = ({ properties, handleDisplay }) => (
   <section className="container-fluid mb-3 mt-5">
@@ -22,23 +23,27 @@ const PropertySection = ({ properties, handleDisplay }) => (
         properties.map((property) => (
           <MDBCol md="4" lg="4" key={property.title}>
             <MDBCard className="mb-4">
-              <MDBRipple
-                rippleColor="light"
-                rippleTag="div"
-                className="bg-image hover-overlay"
+              <Link
+                href="/property/[slug]"
+                as={`/property/${property.slug}`}
+                passHref
               >
-                <MDBCardImage
-                  src={property.pictures[0]}
-                  alt={property.title}
-                  className="globalImg"
-                />
-                <a>
+                <MDBRipple
+                  rippleColor="light"
+                  rippleTag="div"
+                  className="bg-image hover-overlay"
+                >
+                  <MDBCardImage
+                    src={property.pictures[0]}
+                    alt={property.title}
+                    className="globalImg"
+                  />
                   <div
                     className="mask"
                     style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                   ></div>
-                </a>
-              </MDBRipple>
+                </MDBRipple>
+              </Link>
               <MDBCardBody>
                 <MDBCardTitle>{property.title}</MDBCardTitle>
                 <MDBCardText>
@@ -50,15 +55,8 @@ const PropertySection = ({ properties, handleDisplay }) => (
         ))}
     </MDBRow>
     <div className="text-center">
-      <button
-        className="lift py-3 globalBtn my-3"
-      >
-        Afficher plus
-      </button>
-      <button
-        className="lift py-3 ml-3 globalBtn my-3"
-        onClick={handleDisplay}
-      >
+      <button className="lift py-3 globalBtn my-3">Afficher plus</button>
+      <button className="lift py-3 ml-3 globalBtn my-3" onClick={handleDisplay}>
         Pourquoi nous choisir ?
       </button>
     </div>

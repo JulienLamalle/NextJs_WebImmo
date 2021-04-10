@@ -112,8 +112,12 @@
   margin: 0 auto;
 }
 
-a:focus {
-  outline: 0
+a {
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .nav-link {
@@ -122,4 +126,8 @@ a:focus {
   &:hover {
     color: var(--white);
   }
+}
+
+.mask {
+  cursor: pointer;
 }
