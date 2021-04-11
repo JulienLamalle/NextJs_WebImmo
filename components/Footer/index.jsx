@@ -4,7 +4,7 @@ import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Footer = () => {
   return (
-    <MDBFooter className="pt-4 mt-4 text-white bg-night">
+    <MDBFooter className="pt-4 text-white bg-night">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" className="text-center align-self-center">

@@ -1,4 +1,4 @@
-@import 'colors';
+@import "colors";
 
 .globalImg {
   width: 100%;
@@ -6,71 +6,76 @@
 }
 
 .text-night {
-  color: var(--night)
+  color: $night;
 }
 
 .text-dark {
-  color: var(--dark);
+  color: $dark;
 }
 
 .text-light {
-  color: var(--light);
+  color: $light;
 }
 
 .text-lighter {
-  color: var(--lighter);
+  color: $lighter;
 }
 
 .text-black {
-  color: var(--black);
+  color: $black;
 }
 
 .text-white {
-  color: var(--white);
+  color: $white;
 }
 
 .bg-night {
-  background-color: var(--night);
+  background-color: $night;
 }
 
 .bg-dark {
-  background-color: var(--dark);
+  background-color: $dark;
 }
 
 .bg-light {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .bg-lighter {
-  background-color: var(--lighter);
+  background-color: $lighter;
 }
 
 .bg-black {
-  background-color: var(--black);
+  background-color: $black;
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: $white;
 }
 
 .lift {
-  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease;
+  -webkit-transition: box-shadow 0.25s ease, -webkit-transform 0.25s ease;
+  transition: box-shadow 0.25s ease, -webkit-transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease,
+    -webkit-transform 0.25s ease;
 
   &:hover,
   &:focus {
-  box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
-  -webkit-transform: translate3d(0, -1px, 0);
-  transform: translate3d(0, -1px, 0); }
+    box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1),
+      0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+  }
 }
 
 .lift-lg:hover,
 .lift-lg:focus {
-  box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1), 0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
+  box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1),
+    0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
   -webkit-transform: translate3d(0, -5px, 0);
-  transform: translate3d(0, -5px, 0); }
+  transform: translate3d(0, -5px, 0);
+}
 
 @media screen and (min-width: 768px) {
   .globalImg {
@@ -93,9 +98,9 @@
 
 .actived {
   font-weight: bold;
-  background-color: var(--night);
+  background-color: $night;
   pointer-events: none;
-  color: var(--white);
+  color: $white;
 }
 
 .paginate {
@@ -121,10 +126,10 @@ a {
 }
 
 .nav-link {
-  color: var(--white);
+  color: $white;
 
   &:hover {
-    color: var(--white);
+    color: $white;
   }
 }
 
@@ -133,13 +138,30 @@ a {
 }
 
 .carousel-control-prev-icon:after {
-  content: '';
+  content: "";
 }
 
 .carousel-control-next-icon:after {
-  content: '';
+  content: "";
 }
 
 .contact-card {
-  box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+
+.navbar-toggler-icon:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  pointer-events: none;
+  content: "\f142";
+  color: $white;
+}
+
+.login-row {
+  width: 100%;
+  margin: 0 !important;
+
+  img {
+    max-height: 98vh;
+  }
 }

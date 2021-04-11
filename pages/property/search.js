@@ -31,7 +31,7 @@ const Search = () => {
         {router.query.category || router.query.title ? (
           <div>
             <div className="mb-4 text-center text-night font-weight-bolder">
-              {properties.size} Bien(s) trouve(s)
+              {properties.size} Bien(s) trouvé(s)
             </div>
             <Card properties={properties.data} />
           </div>

@@ -1,14 +1,14 @@
-@import 'colors';
+@import "colors";
 
 .globalBtn {
-  background-color: var(--night);
+  background-color: $night;
   border: none;
   border-radius: 50px;
   color: #fff;
   padding: 15px 25px;
 
   &:hover {
-    background-color: var(--night) ;
+    background-color: $night;
   }
 
   &:focus {
@@ -17,14 +17,14 @@
 }
 
 .smBtn {
-  background-color: var(--night);
+  background-color: $night;
   border: none;
   border-radius: 50px;
   color: #fff;
   padding: 8px 15px;
 
   &:hover {
-    background-color: var(--night) ;
+    background-color: $night;
   }
 
   &:focus {

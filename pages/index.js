@@ -22,7 +22,6 @@ export default function Home({propertiesVip, properties }) {
         <Head>
           <title>WebImmo</title>
           <link rel="icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
         </Head>
         <Layout>
           <Carousel />
