@@ -57,7 +57,7 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                 <MDBRow>
                   {propertiesRelated && propertiesRelated.length !== 0 && (
                     <MDBCol>
-                      <h2 className="mb-5">Biens similaires</h2>
+                      <h2 className="mb-4">Nos biens similaires</h2>
                       <CardRelated properties={propertiesRelated} />
                     </MDBCol>
                   )}

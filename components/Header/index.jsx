@@ -1,19 +1,13 @@
 import React from "react";
 import {
   MDBNavbar,
-  MDBNavbarBrand,
   MDBNavbarNav,
-  MDBNavbarItem,
+  MDBNavItem,
   MDBNavbarToggler,
   MDBCollapse,
-  MDBFormInline,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-} from 'mdb-react-ui-kit';
-import { MDBIcon } from 'mdb-react-ui-kit';
-import Link from 'next/link';
+  MDBIcon,
+} from "mdbreact";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -21,20 +15,32 @@ const Header = () => {
       <MDBNavbarToggler />
       <MDBCollapse id="navbarCollapse" navbar>
         <MDBNavbarNav left>
-          <MDBNavbarItem>
-            <div className="nav-link">
-              <MDBIcon icon="home" className="mr-1" />
-              Accueil
-            </div>
-          </MDBNavbarItem>
-          <MDBNavbarItem>
+          <MDBNavItem>
+            <Link href="/">
+              <a className="nav-link">
+                <MDBIcon icon="home" className="mr-1" />
+                Accueil
+              </a>
+            </Link>
+          </MDBNavItem>
+          <MDBNavItem>
             <Link href="/properties" passHref>
               <a className="nav-link">
                 <MDBIcon icon="building" className="mr-1" />
                 Liste des biens
               </a>
             </Link>
-          </MDBNavbarItem>
+          </MDBNavItem>
+        </MDBNavbarNav>
+        <MDBNavbarNav right>
+          <MDBNavItem>
+            <Link href="/contact">
+              <a className="nav-link">
+                <MDBIcon icon="address-book" className="mr-1" />
+                Contact
+              </a>
+            </Link>
+          </MDBNavItem>
         </MDBNavbarNav>
       </MDBCollapse>
     </MDBNavbar>

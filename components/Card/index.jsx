@@ -15,16 +15,8 @@ import Link from "next/link";
 const Card = ({ properties }) => {
   let index = 0;
   return (
-    <MDBCard className="my-5 px-5 pb-5">
+    <MDBCard className=" mt-4 mb-5 px-5 pb-5">
       <MDBCardBody>
-        <h2 className="h1-responsive font-weight-bold text-center my-5 text-night">
-          Découvrez la liste de tous nos biens
-        </h2>
-        <p className="text-center w-responsive mx-auto mb-5">
-          Chaque bien chez WebImmo est unique, nous sélectionnons les domaines
-          les plus convoités du marché pour vous et nous vous accompagons du
-          début à la fin de votre projet.
-        </p>
         {properties &&
           properties.map((property, index) => (
             <MDBRow key={property._id}>
