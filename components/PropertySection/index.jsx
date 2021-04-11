@@ -11,7 +11,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { PriceFormated } from "../Helpers";
-import Link from 'next/link'
+import Link from "next/link";
 
 const PropertySection = ({ properties, handleDisplay }) => (
   <section className="container-fluid mb-3 mt-5">
@@ -55,7 +55,9 @@ const PropertySection = ({ properties, handleDisplay }) => (
         ))}
     </MDBRow>
     <div className="text-center">
-      <button className="lift py-3 globalBtn my-3">Afficher plus</button>
+      <Link href="/properties">
+        <button className="lift py-3 globalBtn my-3">Voir tous nos biens</button>
+      </Link>
       <button className="lift py-3 ml-3 globalBtn my-3" onClick={handleDisplay}>
         Pourquoi nous choisir ?
       </button>
