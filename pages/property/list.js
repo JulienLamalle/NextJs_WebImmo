@@ -7,6 +7,7 @@ import api from "../../auth/axios";
 import dayjs from "dayjs";
 import { PriceFormated } from "../../components/Helpers";
 import useAuth from "../../auth/context";
+import Link from "next/link";
 
 const fetcher = (url) => api.get(url).then((res) => res.data.data);
 
@@ -84,14 +85,20 @@ const PropertyList = () => {
           price: PriceFormated(property.price),
           category: property.category.name,
           pictures: property && (
-            <MDBView hover zoom waves>
-              <img
-                src={property.pictures[0]}
-                alt="Premier slide"
-                width={120}
-                height={80}
-              />
-            </MDBView>
+            <Link
+              href="/property/[slug]"
+              as={`/property/${property.slug}`}
+              passHref
+            >
+              <MDBView hover zoom waves>
+                <img
+                  src={property.pictures[0]}
+                  alt="Premier slide"
+                  width={120}
+                  height={80}
+                />
+              </MDBView>
+            </Link>
           ),
           sold:
             (property.sold === false && (
@@ -134,7 +141,7 @@ const PropertyList = () => {
   };
 
   return (
-    <>
+    <div>
       {user && user.role === "admin" && (
         <Layout>
           <MDBContainer fluid>
@@ -149,11 +156,12 @@ const PropertyList = () => {
               infoLabel={["Affiche", "à", "de", "biens"]}
               searchTop
               searchBottom={false}
+              responsive={true}
             />
           </MDBContainer>
         </Layout>
       )}
-    </>
+    </div>
   );
 };
 
