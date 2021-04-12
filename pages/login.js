@@ -33,7 +33,7 @@ const Login = () => {
         <MDBCol lg="6" className="login-img px-0">
           <img className="w-100" src="/images/home.jpeg"></img>
         </MDBCol>
-        <MDBCol lg="6" md="6" className="d-flex row align-items-center justify-content-center pr-0 mx-auto">
+        <MDBCol lg="6" md="6" className="d-flex row align-items-center px-2 mx-auto">
           <form onSubmit={onSubmit}>
             <p className="h4 text-center my-4 font-weight-bolder text-night">
               Connexion
