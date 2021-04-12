@@ -30,10 +30,10 @@ const Login = () => {
   return (
     <Layout>
       <MDBRow className="login-row">
-        <MDBCol lg="6" md="6" sm="0" className="pl-0">
+        <MDBCol lg="6" className="login-img px-0">
           <img className="w-100" src="/images/home.jpeg"></img>
         </MDBCol>
-        <MDBCol lg="6" md="6" sm="12" className="d-flex row align-items-center justify-content-center pr-0">
+        <MDBCol lg="6" md="6" className="d-flex row align-items-center justify-content-center pr-0 mx-auto">
           <form onSubmit={onSubmit}>
             <p className="h4 text-center my-4 font-weight-bolder text-night">
               Connexion
@@ -55,7 +55,7 @@ const Login = () => {
                 onChange={handleChange("password")}
               />
             </div>
-            <div className="text-center mt-4 w-25 mx-auto">
+            <div className="text-center mt-4 mx-auto mb-4">
               <button type="submit" className="btn-block smBtn">
                 Connexion
               </button>

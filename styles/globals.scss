@@ -84,6 +84,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .login-img {
+    display: none;
+  }
+
+  .login-row {
+    min-height: 80vh;
+  }
+}
+
 .custom-paginate {
   display: flex;
   list-style: none;
