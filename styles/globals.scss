@@ -113,8 +113,16 @@
 }
 
 .paginate-center {
-  width: 35%;
+  width: 26%;
   margin: 0 auto;
+
+  .previous {
+    margin: 0 auto;
+  }
+
+  .next {
+    margin: 0 auto;
+  }
 }
 
 a {
@@ -166,6 +174,22 @@ a {
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+
+  .paginate-center {
+    width: 35%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .login-img {
     display: none;
@@ -176,7 +200,30 @@ a {
   }
 
   .paginate-center {
-    width: 100%;
-    margin: 0 auto;
+    width: 70%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
   }
 }
+
+@media screen and (max-width: 576px) {
+
+  .paginate-center {
+    width: 100%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
+  }
+}
+

@@ -37,7 +37,7 @@ const Properties = ({ properties, currentPage, pageCount }) => {
             début à la fin de votre projet.
           </p>
           <Card properties={properties} />
-          <div className="paginate-center">
+          <div className="d-flex row justify-content-center mx-auto paginate-center">
             <ReactPaginate
               onPageChange={paginationHandler}
               initialPage={currentPage - 1}
