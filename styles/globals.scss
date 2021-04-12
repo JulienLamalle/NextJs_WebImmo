@@ -84,16 +84,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .login-img {
-    display: none;
-  }
-
-  .login-row {
-    min-height: 80vh;
-  }
-}
-
 .custom-paginate {
   display: flex;
   list-style: none;
@@ -173,5 +163,20 @@ a {
 
   img {
     max-height: 98vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-img {
+    display: none;
+  }
+
+  .login-row {
+    min-height: 80vh;
+  }
+
+  .paginate-center {
+    width: 100%;
+    margin: 0 auto;
   }
 }

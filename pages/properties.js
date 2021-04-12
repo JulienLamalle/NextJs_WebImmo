@@ -42,8 +42,8 @@ const Properties = ({ properties, currentPage, pageCount }) => {
               onPageChange={paginationHandler}
               initialPage={currentPage - 1}
               pageCount={pageCount}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={5}
+              marginPagesDisplayed={1}
+              pageRangeDisplayed={2}
               previousLabel="Precedent"
               nextLabel="Suivant"
               activeClassName="actived"
